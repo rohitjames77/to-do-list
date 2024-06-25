@@ -5,6 +5,7 @@ const { watch } = require("fs");
 module.exports = {
   entry: "./src/index.js",
   mode: "development",
+  watch: true,
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
@@ -27,6 +28,29 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[hash].[ext]',
+              outputPath: 'images',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
+      {
         test: /\.(?:js|mjs|cjs)$/,
         exclude: /node_modules/,
         use: {
@@ -37,5 +61,8 @@ module.exports = {
         },
       },
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.png', '.jpg', '.jpeg', '.gif', '.svg']
   },
 };
