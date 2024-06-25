@@ -4,29 +4,43 @@ body{
   margin: 0;
   padding: 0;
 }
-#test {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: large;
-  color: rgb(15, 15, 125);
-}
-#heading{
-  color :red;
+
+
+.side-bar{
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  margin-top: -12px; 
+  background-color: rgb(224, 224, 224);
 }
 
-.header{
-  margin-top: 0;
-  position: fixed;
-  bottom: 90%;
-height: 10%;
-width: 100%;
-background-color: rgb(220, 220, 220);
-box-shadow:0 0 8px 0 rgb(0, 0, 0,0.5);
+#side-bar-title{
+  position: absolute;
+  bottom: 82%;
+  left: 5%;
+font-family: 'Times New Roman', Times, serif;
+font-size: 48px;
 }
-.header-title{
-  position: relative;
-  bottom:55% ;
-  left: 8%;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 48px;
-  color: grey;
+
+#btn-image{
+  background-image: url('./assets/to-do-list.png');
+  position: absolute;
+  top: 5%;
+  left:90%;
+  height: 50px;
+  width: 50px;
+background-color: rgb(224, 224, 224);
+border-radius: 50px;
+padding: 15px;
+margin: 0;
 }
+
+#btn-image:hover{
+  background-color: rgb(121, 121, 121);
+
+}
+#btn-image:active { 
+  box-shadow:  7px 6px 28px 1px rgba(0, 0, 0, 0.50); 
+  transform: translateY(4px); 
+  /* Moving button 4px to y-axis */ 
+} 

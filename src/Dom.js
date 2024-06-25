@@ -1,20 +1,37 @@
 import "./style.css";
-import image from "./header-logo.png"
-// Header Div......................................
+import image from '../src/assets/to-do-list.png'
+// Sidebar Div .......................................
 const body = document.querySelector('body');
-const header = document.createElement('header');
-header.classList ='header';
-body.appendChild(header);
-// Header title ......................................
-const headerTitle = document.createElement('h1');
-headerTitle.classList ='header-title';
-headerTitle.textContent='To-Do';
-header.appendChild(headerTitle); 
-// Header Logo .......................................
-// Header title logo...................................
-const logo = document.createElement('img');
-logo.src= image;
-logo.alt='header-logo';
-header.appendChild(logo);
+const sideBar = document.createElement('div');
+sideBar.classList= 'side-bar';
+body.appendChild(sideBar);
+// Sidebar Title and Logo ...............................
+const title = document.createElement('h1');
+title.id = 'side-bar-title';
+title.textContent='To-Do';
+sideBar.appendChild(title);
+// new To Do create Button ................................
+const btnImage = document.createElement('img');
+btnImage.id ='btn-image';
+btnImage.src=image;
+btnImage.alt = 'btn-image'
+body.appendChild(btnImage);
+const card = document.createElement('div ');
+card.id ='card';
+body.appendChild(card);
 
-export{header,headerTitle,logo};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export{sideBar,title,btnImage,card}

@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { watch } = require("fs");
 
 module.exports = {
   entry: "./src/index.js",
@@ -28,24 +27,15 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[hash].[ext]',
-              outputPath: 'images',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
           {
             loader: 'url-loader',
             options: {
-              limit: 8192,
+              limit: 8192, // Images larger than 8 KB will fall back to file-loader
+              name: '[name].[hash].[ext]',
+              outputPath: 'images',
+              esModule: false, // Ensures compatibility with html-loader
             },
           },
         ],
