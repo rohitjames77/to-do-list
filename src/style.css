@@ -4,13 +4,18 @@ body{
   margin: 0;
   padding: 0;
 }
+/* #test{
+  height: 200px;
+  width: 200px;
+  background-color: rgb(65, 224, 224);
+  border: 2px solid black;
+} */
 
 
-.side-bar{
+#side-bar{
   height: 100%;
   width: 15%;
   position: fixed;
-  margin-top: -12px; 
   background-color: rgb(224, 224, 224);
 }
 
@@ -31,7 +36,7 @@ font-size: 48px;
   width: 50px;
 background-color: rgb(224, 224, 224);
 border-radius: 50px;
-padding: 15px;
+padding: 5px;
 margin: 0;
 }
 
@@ -44,3 +49,51 @@ margin: 0;
   transform: translateY(4px); 
   /* Moving button 4px to y-axis */ 
 } 
+
+
+#default-parent{
+position: absolute;
+top:20%;
+left: 17%;
+background-color: rgb(228, 228, 254);
+  height : 65%;
+ width : 75%;
+border-radius: 5px;
+}
+#dummy{
+  position:absolute;
+  border: 2px solid black;
+  top: 10%;
+}
+
+#default-button{
+position:absolute ;
+top: 40%;
+border: none;
+background-color:  rgb(224, 224, 224);
+font-size: 1rem;
+width: 100%;
+color: grey;
+}
+
+#default-button:hover{
+  border-radius: 5px;
+background-color:rgb(189, 189, 189);
+color: white;
+}
+
+#default-button:active{
+  box-shadow:  7px 6px 28px 1px rgba(0, 0, 0, 0.20); 
+  transform: translateY(4px); 
+}
+
+#default-child{
+  position: absolute;
+  top: 18%;
+  bottom: 2%;
+  left: 30%;
+  background-color: rgb(255, 255, 255);
+  height: 80%;
+  width: 40%;
+border-radius: 15px 15px 0 0;
+}
