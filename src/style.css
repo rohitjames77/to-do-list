@@ -1,93 +1,103 @@
-body{
+body {
   height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
+  background-color: rgb(244, 244, 244);
 }
-/* #test{
-  height: 200px;
-  width: 200px;
-  background-color: rgb(65, 224, 224);
-  border: 2px solid black;
-} */
 
+#form-input-div {
+  height: 15%;
+  width: 100%;
+  background-color: rgb(255, 240, 217);
+  position: absolute;
+  top: 17%;
+  border: none;
+  padding: 0;
+}
 
-#side-bar{
-  height: 100%;
-  width: 15%;
+#side-bar {
+  height: 13%;
+  width: 100%;
   position: fixed;
-  background-color: rgb(224, 224, 224);
+  bottom: 87%;
+  background-color: blanchedalmond;
+  box-shadow: 3px 3px 3px rgb(166, 165, 165);
+  z-index: 1;
 }
 
-#side-bar-title{
+#side-bar-title {
+  position: relative;
+  bottom: 20%;
+  left: 2%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 48px;
+  color: white;
+  border-radius: 15px;
+}
+
+#side-bar-title:hover {
+  color: rgb(241, 239, 239);
+}
+#side-bar-title:active {
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+#btn-image {
+  position: fixed;
+  top: 15%;
+  left: 85%;
+  height: 18%;
+  width: 10%;
+  border-radius: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#btn-image:active {
+  transform: translateY(4px);
+}
+
+#default-parent {
   position: absolute;
-  bottom: 82%;
-  left: 5%;
-font-family: 'Times New Roman', Times, serif;
-font-size: 48px;
+  top: 20%;
+  left: 15%;
+  background-color: rgb(228, 228, 254);
+  height: 65%;
+  width: 75%;
+  border-radius: 5px;
+  display: none;
 }
-
-#btn-image{
-  background-image: url('./assets/to-do-list.png');
+#dummy {
   position: absolute;
-  top: 5%;
-  left:90%;
-  height: 50px;
-  width: 50px;
-background-color: rgb(224, 224, 224);
-border-radius: 50px;
-padding: 5px;
-margin: 0;
-}
-
-#btn-image:hover{
-  background-color: rgb(121, 121, 121);
-
-}
-#btn-image:active { 
-  box-shadow:  7px 6px 28px 1px rgba(0, 0, 0, 0.50); 
-  transform: translateY(4px); 
-  /* Moving button 4px to y-axis */ 
-} 
-
-
-#default-parent{
-position: absolute;
-top:20%;
-left: 17%;
-background-color: rgb(228, 228, 254);
-  height : 65%;
- width : 75%;
-border-radius: 5px;
-}
-#dummy{
-  position:absolute;
   border: 2px solid black;
   top: 10%;
 }
 
-#default-button{
-position:absolute ;
-top: 40%;
-border: none;
-background-color:  rgb(224, 224, 224);
-font-size: 1rem;
-width: 100%;
-color: grey;
+#default-button {
+  position: absolute;
+  top: 40%;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(195, 195, 195);
+  font-size: 1rem;
+  width: 100%;
+  color: grey;
 }
 
-#default-button:hover{
+#default-button:hover {
   border-radius: 5px;
-background-color:rgb(189, 189, 189);
-color: white;
+  background-color: rgb(189, 189, 189);
+  color: white;
 }
 
-#default-button:active{
-  box-shadow:  7px 6px 28px 1px rgba(0, 0, 0, 0.20); 
-  transform: translateY(4px); 
+#default-button:active {
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.2);
+  transform: translateY(4px);
 }
 
-#default-child{
+#default-child {
   position: absolute;
   top: 18%;
   bottom: 2%;
@@ -95,5 +105,544 @@ color: white;
   background-color: rgb(255, 255, 255);
   height: 80%;
   width: 40%;
-border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 0 0;
+}
+#head-div {
+  position: absolute;
+  border-radius: 15px 15px 0 0;
+  height: 13%;
+  width: 100%;
+
+  background-color: rgb(233, 232, 232);
+}
+#head-title {
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.2rem;
+  word-spacing: 10rem;
+  color: rgb(116, 113, 113);
+}
+
+#form-div {
+  height: 87%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 13%;
+  background-color: rgb(253, 253, 253);
+}
+#form-footer {
+  position: absolute;
+  height: 13%;
+  width: 100%;
+  top: 87%;
+  background-color: rgb(233, 232, 232);
+}
+
+#form-button {
+  position: absolute;
+  top: 20%;
+  left: 75%;
+  height: 65%;
+  width: 20%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1rem;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(116, 113, 113);
+  border-radius: 15px;
+}
+
+#form-button:active {
+  box-shadow: 7px 6px 8px 1px rgba(0, 0, 0, 0.1);
+  transform: translateY(1.5px);
+}
+#form-button:hover {
+  opacity: 0.6;
+}
+
+#card-parent-div {
+  margin-top: auto;
+  padding: 0;
+  height: 100%;
+  width: 95%;
+  position: relative;
+  top: 5%;
+  left: 2%;
+  border-radius: 15px;
+  background-color: rgb(255, 240, 217);
+  box-shadow: 4px 4px 4px rgb(166, 165, 165);
+}
+
+#card-form {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 240, 217);
+  border-radius: 15px;
+}
+
+#card-form-title {
+  height: 10%;
+  width: 20%;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  background-color: rgb(255, 240, 217);
+  border-radius: 15px;
+  border: none;
+  padding: 3px;
+  resize: none;
+  font-size: 12px;
+}
+
+#card-add-line {
+  height: 9%;
+  width: 15%;
+  position: absolute;
+  top: 85%;
+  left: 2%;
+  background-color: rgb(255, 240, 217);
+  border-radius: 15px;
+  border: none;
+  padding: 3px;
+  resize: none;
+  font-size: 14px;
+  color: rgb(131, 131, 131);
+}
+
+#card-add-line:hover {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+#card-add-line:active {
+  box-shadow: 7px 6px 8px 1px rgba(0, 0, 0, 0.1);
+  transform: translateY(1.5px);
+}
+
+#task-status {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 28%;
+  left: 2%;
+  background-color: rgb(253, 228, 190);
+}
+#time-div {
+  position: absolute;
+  top: 10%;
+  left: 55%;
+  height: 80%;
+  background-color: rgb(255, 240, 217);
+  border: none;
+}
+
+#date-select {
+  position: absolute;
+  top: 10%;
+  height: 80%;
+  left: 70%;
+  width: 11%;
+  background-color: rgb(255, 240, 217);
+  border: none;
+  overflow-y: hidden;
+}
+
+#card-form-parent {
+  position: absolute;
+  height: 70%;
+  width: 80%;
+  top: 8%;
+  left: 8%;
+  overflow-x: hidden;
+}
+
+#card-form-input {
+  height: 50%;
+  width: 45%;
+  background-color: rgb(255, 240, 217);
+  border-radius: 15px;
+  position: absolute;
+  top: 18%;
+  left: 6%;
+  border: none;
+  padding: 3px;
+  resize: none;
+  overflow: hidden;
+}
+#card-form-input:focus {
+  background-color: rgb(255, 222, 168);
+  border: 4px solid rgb(255, 222, 168);
+  outline: none;
+}
+#form-priority-div {
+  position: absolute;
+  left: 85%;
+  top: 15%;
+  background-color: rgb(255, 240, 217);
+  height: 70%;
+  width: 10%;
+  padding: 0;
+}
+
+#form-save-button {
+  position: absolute;
+  top: 85%;
+  left: 85%;
+  border: none;
+  border-radius: 25px;
+  background-color: rgb(255, 240, 217);
+  color: grey;
+  font-size: 14px;
+}
+
+#form-save-button:hover {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+#form-save-button:active {
+  box-shadow: 7px 6px 8px 1px rgba(0, 0, 0, 0.1);
+  transform: translateY(1.5px);
+}
+
+#cancel-card {
+  height: 15%;
+  width: 15%;
+  position: absolute;
+  bottom: 89%;
+  left: 91%;
+  color: grey;
+  border-radius: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+#cancel-card:hover {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+#cancel-card:active {
+  box-shadow: 7px 6px 8px 1px rgba(0, 0, 0, 0.1);
+  transform: translateY(1.5px);
+}
+
+#save-card {
+  position: absolute;
+  top: 40%;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(195, 195, 195);
+  font-size: 1rem;
+  width: 100%;
+  color: grey;
+}
+
+#save-card:hover {
+  border-radius: 5px;
+  background-color: rgb(189, 189, 189);
+  color: white;
+}
+#save-card:active {
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.2);
+  transform: translateY(4px);
+}
+
+#card-container {
+  display: block;
+  height: 40%;
+  width: 65%;
+  scroll-behavior: smooth;
+  position: relative;
+  top: 15%;
+  left: 15%;
+  margin-bottom: 1%;
+  padding: 0;
+}
+
+/* new modal form styles below */
+
+.form_parent_div {
+  position: fixed;
+  box-shadow: 8px 8px 8px grey;
+  top: 15%;
+  left: 30%;
+  height: 70%;
+  width: 40%;
+  background-color: blanchedalmond;
+  border-radius: 25px;
+}
+
+.heading {
+  position: absolute;
+  bottom: 88%;
+  left: 35%;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: grey;
+}
+
+.task_title {
+  position: absolute;
+  width: 90%;
+  height: 6%;
+  top: 5%;
+  left: 5%;
+  background-color: rgba(255, 255, 255, 0.823);
+  border: none;
+  border-radius: 5%;
+  margin-top: 5%;
+  box-shadow: 3px 3px 3px rgb(166, 165, 165);
+}
+.task_title:focus {
+  outline: none;
+}
+
+.task_btn {
+  position: absolute;
+  top: 88%;
+  left: 82%;
+  border: 2px black;
+  height: 8%;
+  width: 14%;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  background-color: rgb(152, 241, 69);
+  color: grey;
+  border-radius: 7px;
+  box-shadow: 3px 3px 3px rgb(166, 165, 165);
+}
+.task_btn:active {
+  transform: translateY(4px);
+}
+
+.description {
+  width: 90%;
+  height: 45%;
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  background-color: rgba(255, 255, 255, 0.823);
+  border: none;
+  border-radius: 5%;
+  margin-top: 5%;
+  resize: none;
+  box-shadow: 3px 3px 3px rgb(166, 165, 165);
+}
+.description:focus {
+  outline: none;
+}
+
+.priority_input {
+  position: absolute;
+  width: 25%;
+  height: 6%;
+  top: 75%;
+  left: 5%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.823);
+  border-radius: 5%;
+  box-shadow: 3px 3px 3px rgb(166, 165, 165);
+}
+.priority_input:active {
+  transform: translateY(2px);
+}
+
+.option_1 .option_2 .option_3 .option_4 {
+  width: 100%;
+  height: 100%;
+}
+.date_input {
+  position: absolute;
+  width: 25%;
+  height: 6%;
+  top: 75%;
+  left: 40%;
+  background-color: rgba(255, 255, 255, 0.823);
+  border: none;
+  border-radius: 5%;
+  box-shadow: 3px 3px 3px rgb(166, 165, 165);
+}
+.date_input:focus {
+  outline: none;
+}
+.date_input:active {
+  transform: translateY(2px);
+}
+
+.time_input {
+  position: absolute;
+  width: 20%;
+  height: 6%;
+  left: 75%;
+  top: 75%;
+  background-color: rgba(255, 255, 255, 0.823);
+  border: none;
+  border-radius: 5%;
+  box-shadow: 3px 3px 3px rgb(166, 165, 165);
+}
+.time_input:focus {
+  outline: none;
+}
+.time_input:active {
+  transform: translateY(2px);
+}
+
+.heading_div {
+  position: absolute;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 20%;
+}
+
+.saved_heading {
+  position: relative;
+  bottom: 30%;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 1.8rem;
+  /* font-weight: 400; */
+  text-align: center;
+}
+.saved_description {
+  position: relative;
+  font-size: 1rem;
+  top: 15%;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+.saved_time {
+  position: absolute;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  left: 40%;
+  top: 65%;
+}
+.saved_priority {
+  position: absolute;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  top: 65%;
+  left: 20%;
+}
+.saved_date {
+  position: absolute;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  left: 60%;
+  top: 65%;
+}
+.description_parent {
+  position: absolute;
+  background: white;
+  width: 98%;
+  height: 50%;
+  top: 25%;
+  left: 1%;
+  border-radius: 15px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+.edit_btn {
+  position: absolute;
+  top: 78%;
+  left: 90%;
+  height: 17%;
+  width: 8%;
+  background-color: rgb(152, 241, 69);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px rgb(166, 165, 165);
+}
+.edit_btn:active {
+  background-color: green;
+  color: white;
+  transform: translateY(3px);
+}
+
+.delete_image {
+  position: absolute;
+  height: 20%;
+  width: 5%;
+  top: 2%;
+  left: 93%;
+}
+
+.delete_image:active {
+  transform: translateY(3px);
 }

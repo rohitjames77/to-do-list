@@ -8,12 +8,13 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "images/[hash][ext][query]",
   },
   devServer: {
     static: {
       directory: path.resolve(__dirname, "dist"),
     },
-    port: 3000,
+    port: 3100,
     open: true,
     hot: true,
     compress: true,
@@ -27,18 +28,11 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192, // Images larger than 8 KB will fall back to file-loader
-              name: '[name].[hash].[ext]',
-              outputPath: 'images',
-              esModule: false, // Ensures compatibility with html-loader
-            },
-          },
-        ],
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "images/[name][ext]",
+        },
       },
       {
         test: /\.(?:js|mjs|cjs)$/,
@@ -53,6 +47,6 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.png', '.jpg', '.jpeg', '.gif', '.svg']
+    extensions: [".js", ".jsx", ".png", ".jpg", ".jpeg", ".gif", ".svg"],
   },
 };
